@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recruiter Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        h1 { color: #0056b3; }
+        .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .upload-new { display: inline-block; padding: 10px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; }
+        .upload-new:hover { background-color: #218838; text-decoration: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #fff; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; font-weight: bold; }
+        .button-link { display: inline-block; padding: 8px 12px; background-color: #007bff; color: white; text-decoration: none; border-radius: 3px; margin: 2px; font-size: 12px; }
+        .button-link:hover { background-color: #0056b3; text-decoration: none; }
+        .delete-button { display: inline-block; padding: 8px 12px; background-color: #dc3545; color: white; border: none; border-radius: 3px; margin: 2px; cursor: pointer; font-size: 12px; }
+        .delete-button:hover { background-color: #c82333; }
+        .status-badge { display: inline-block; padding: 5px 10px; border-radius: 3px; font-size: 12px; font-weight: bold; }
+        .status-active { background-color: #d4edda; color: #155724; }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <h1>Recruiter Dashboard</h1>
+        <a href="/upload_job_description" class="upload-new">Create New Job Form</a>
+    </div>
+
+    {% if job_descriptions %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Job Title</th>
+                <th>Job File</th>
+                <th>Recruiter Email</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in job_descriptions %}
+            <tr>
+                <td>{{ job.job_title if job.job_title else 'N/A' }}</td>
+                <td>{{ job.original_filename }}</td>
+                <td>{{ job.recruiter_email if job.recruiter_email else 'N/A' }}</td>
+                <td><span class="status-badge status-active">{{ job.status }}</span></td>
+                <td>{{ job.upload_timestamp[:10] }}</td>
+                <td>
+                    <a href="/job_form_details/{{ job.job_id }}" class="button-link">View Form Link</a>
+                    <a href="/match_resumes/{{ job.job_id }}" class="button-link">Run Matching</a>
+                    <a href="/view_results/{{ job.job_id }}" class="button-link">View Results</a>
+                    <form method="POST" action="/delete_job/{{ job.job_id }}" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this job and all associated resumes?');">
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No job forms created yet. <a href="/upload_job_description">Create one now</a></p>
+    {% endif %}
+</body>
+</html>

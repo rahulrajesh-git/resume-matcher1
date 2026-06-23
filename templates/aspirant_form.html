@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Apply for Job</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        h1 { color: #0056b3; }
+        .form-container { background-color: #fff; padding: 30px; border-radius: 5px; max-width: 600px; margin: 0 auto; }
+        form { margin-top: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input[type="text"], input[type="email"], input[type="file"] { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 3px; 
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="file"]:focus { 
+            outline: none; 
+            border-color: #007bff; 
+            box-shadow: 0 0 5px rgba(0,123,255,0.5);
+        }
+        input[type="submit"] { 
+            background-color: #28a745; 
+            color: white; 
+            padding: 12px 30px; 
+            border: none; 
+            border-radius: 3px; 
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        input[type="submit"]:hover { background-color: #218838; }
+        .required { color: red; }
+        .info-box { background-color: #e7f3ff; border: 1px solid #007bff; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Job Application</h1>
+        
+        <div class="info-box">
+            <p><strong>Please provide your details and upload your resume below.</strong></p>
+            <p>All fields are required to submit your application.</p>
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="aspirant_name">Full Name <span class="required">*</span></label>
+                <input type="text" id="aspirant_name" name="aspirant_name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="aspirant_email">Email Address <span class="required">*</span></label>
+                <input type="email" id="aspirant_email" name="aspirant_email" required placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <label for="resume_file">Resume File <span class="required">*</span></label>
+                <input type="file" id="resume_file" name="resume_file" accept=".pdf,.doc,.docx,.txt" required>
+                <small style="color: #666; margin-top: 5px; display: block;">Supported formats: PDF, DOC, DOCX, TXT</small>
+            </div>
+
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+</body>
+</html>

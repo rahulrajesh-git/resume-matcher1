@@ -1,0 +1,4 @@
+We are looking for a detail-oriented Data Analyst to join our team. Responsibilities include data cleaning,
+analysis, visualization, and building dashboards to support decision-making. Proficiency in SQL, Python,
+and Excel is required. Experience with BI tools such as Tableau or Power BI is a plus.
+java,c++,Linux,Networking  backend systems handled network configurations communication protocols in distributed systems.

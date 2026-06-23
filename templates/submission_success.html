@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Application Submitted</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .success-container { 
+            background-color: #fff; 
+            padding: 40px; 
+            border-radius: 5px; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            text-align: center;
+            border-left: 5px solid #28a745;
+        }
+        h1 { color: #28a745; margin-top: 0; }
+        .success-icon { font-size: 48px; color: #28a745; margin-bottom: 20px; }
+        p { font-size: 16px; line-height: 1.6; margin-bottom: 15px; }
+        .info-box { 
+            background-color: #e7f3ff; 
+            border: 1px solid #007bff; 
+            padding: 15px; 
+            border-radius: 5px; 
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✓</div>
+        <h1>Application Submitted Successfully!</h1>
+        
+        <p><strong>Thank you, {{ aspirant_name }}!</strong></p>
+        
+        <p>Your resume has been successfully uploaded and registered for this job position.</p>
+        
+        <div class="info-box">
+            <p><strong>What happens next?</strong></p>
+            <p>The recruiter will review your application and run a resume matching process. You'll be notified of the results soon.</p>
+        </div>
+
+        <p style="color: #666; font-size: 14px; margin-top: 30px;">
+            You can close this window now. Thank you for applying!
+        </p>
+    </div>
+</body>
+</html>

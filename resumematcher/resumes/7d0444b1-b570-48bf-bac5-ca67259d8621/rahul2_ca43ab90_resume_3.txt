@@ -1,0 +1,14 @@
+Alice Johnson  
+Email: alice.johnson@gmail.com  
+Phone: (345) 678-9012  
+
+Skills:  
+- Java  
+- C++  
+- Linux  
+- Networking  
+
+Experience:  
+- Developed backend systems for server applications.  
+- Maintained Linux-based servers and handled network configurations.  
+- Worked on low-latency communication protocols in distributed systems.

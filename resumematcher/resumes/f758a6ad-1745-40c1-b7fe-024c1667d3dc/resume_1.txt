@@ -1,0 +1,15 @@
+John Adams  
+Email: john.adams@gmail.com  
+Phone: (123) 456-7890  
+
+Skills:  
+- Python  
+- SQL  
+- Data Cleaning  
+- Tableau  
+- Data Visualization  
+
+Experience:  
+- Built automated dashboards using Tableau to monitor KPIs.  
+- Cleaned and analyzed large datasets using Python and Pandas.  
+- Collaborated with stakeholders to define reporting requirements.

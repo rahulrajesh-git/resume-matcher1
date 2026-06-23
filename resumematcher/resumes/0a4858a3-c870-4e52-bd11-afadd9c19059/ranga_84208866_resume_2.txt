@@ -1,0 +1,14 @@
+Jamie Shin  
+Email: Jamie.Shin@email.com  
+Phone: (234) 567-8901  
+
+Skills:  
+- Excel  
+- VBA  
+- Financial Forecasting  
+- Python (basic)  
+
+Experience:  
+- Built Excel models for budgeting and financial planning.  
+- Used VBA to automate repetitive data entry tasks.  
+- Worked with small datasets to generate business reports.
